@@ -1,0 +1,1000 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SevenSeers Consulting — C-level &amp; board search for R&amp;D and engineering companies | Bangalore</title>
+<meta name="description" content="Boutique C-level and board-level executive search for R&D, engineering, manufacturing and IT services companies. Retained and confidential mandates. Bangalore, serving from 2010.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
+
+<style>
+/* ============================================================
+   SEVENSEERS CONSULTING
+   Colours taken from the firm's logo.
+   ============================================================ */
+
+:root{
+  --ink:      #1B1D1E;
+  --paper:    #F7F5F1;
+  --paper-2:  #EFEBE4;
+  --accent:   #672833;
+  --accent-lt:#C98A94;
+  --muted:    #565B5F;
+  --hairline: #D9D5CC;
+  --measure:  62ch;
+}
+
+*{ box-sizing:border-box; margin:0; padding:0; }
+html{ scroll-behavior:smooth; }
+
+body{
+  background:var(--paper);
+  color:var(--ink);
+  font-family:-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-size:1.0625rem;
+  line-height:1.65;
+  -webkit-font-smoothing:antialiased;
+}
+@media (max-width:760px){ body{ padding-bottom:64px; } }
+
+h1,h2,h3,h4{
+  font-family:"Spectral", Georgia, "Times New Roman", serif;
+  font-weight:300;
+  line-height:1.12;
+  letter-spacing:-0.015em;
+}
+p{ max-width:var(--measure); }
+img{ max-width:100%; }
+
+a{ color:var(--accent); text-underline-offset:3px; }
+a:focus-visible, button:focus-visible{
+  outline:2px solid var(--accent); outline-offset:3px;
+}
+.skip-link{
+  position:absolute; left:-9999px; top:0;
+  background:var(--ink); color:var(--paper); padding:0.6rem 1rem; z-index:200;
+}
+.skip-link:focus{ left:0.5rem; top:0.5rem; }
+
+.wrap{
+  max-width:1200px; margin:0 auto;
+  padding-left:clamp(1.25rem,4vw,3rem);
+  padding-right:clamp(1.25rem,4vw,3rem);
+}
+.shell{ display:block; }
+@media (min-width:960px){
+  .shell{ display:grid; grid-template-columns:200px 1fr; column-gap:4rem; align-items:start; }
+}
+.eyebrow{
+  display:block; font-size:0.75rem; font-weight:600;
+  letter-spacing:0.16em; text-transform:uppercase;
+  color:var(--accent); margin-bottom:1.5rem;
+}
+@media (min-width:960px){
+  .eyebrow{ margin-bottom:0; padding-top:0.85rem; border-top:1px solid var(--ink); }
+}
+h2{ font-size:clamp(1.875rem,3.6vw,2.875rem); margin-bottom:1.5rem; max-width:22ch; }
+.sec-lede{ color:var(--muted); font-size:1.125rem; margin-bottom:2.5rem; }
+
+.s-open{  padding:clamp(5.5rem,11vw,10rem) 0; }
+.s-mid{   padding:clamp(4.5rem,8vw,7.5rem) 0; }
+.s-tight{ padding:clamp(3rem,5vw,4.5rem) 0; }
+.rule-top{ border-top:1px solid var(--hairline); }
+
+/* ---------- Buttons ---------- */
+.btn{
+  display:inline-block; text-decoration:none; font-size:1rem;
+  padding:0.95rem 1.6rem; border:1px solid transparent;
+  transition:background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+.btn-primary{ background:var(--accent); color:var(--paper); border-color:var(--accent); }
+.btn-primary:hover{ background:var(--ink); border-color:var(--ink); }
+.btn-outline{ background:transparent; color:var(--ink); border-color:var(--ink); }
+.btn-outline:hover{ background:var(--ink); color:var(--paper); }
+.btn-row{ display:flex; flex-wrap:wrap; gap:0.75rem; }
+
+/* ---------- Header ---------- */
+header{
+  position:sticky; top:0; z-index:100;
+  background:rgba(247,245,241,0.96);
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--hairline);
+}
+.nav{ display:flex; align-items:center; justify-content:space-between; gap:1rem; padding:0.8rem 0; }
+.logo-link{ display:block; line-height:0; flex:0 0 auto; }
+.logo-link img{ height:46px; width:auto; display:block; }
+@media (max-width:600px){ .logo-link img{ height:36px; } }
+.nav-right{ display:flex; align-items:center; gap:1.5rem; }
+.nav-links{ display:none; list-style:none; gap:1.5rem; }
+.nav-links a{ color:var(--muted); text-decoration:none; font-size:0.9rem; }
+.nav-links a:hover{ color:var(--ink); text-decoration:underline; }
+@media (min-width:1060px){ .nav-links{ display:flex; } }
+.nav-cta{
+  font-size:0.85rem; padding:0.55rem 1.1rem;
+  background:var(--accent); color:var(--paper);
+  text-decoration:none; white-space:nowrap;
+  transition:background 0.2s ease;
+}
+.nav-cta:hover{ background:var(--ink); }
+@media (max-width:760px){ .nav-cta{ display:none; } }
+
+/* ---------- Hero ---------- */
+.hero{ padding:clamp(4.5rem,10vw,8.5rem) 0 clamp(3rem,6vw,5rem); }
+.hero-grid{ display:grid; gap:3rem; align-items:center; }
+@media (min-width:1000px){
+  .hero-grid{ grid-template-columns:1.15fr 0.85fr; gap:4.5rem; }
+}
+.hero h1{
+  font-size:clamp(2.5rem,6vw,4.5rem);
+  max-width:16ch; margin-bottom:1.75rem;
+}
+.hero .lede{
+  font-size:clamp(1.125rem,1.6vw,1.3125rem);
+  line-height:1.55; color:var(--muted);
+  max-width:46ch; margin-bottom:2.25rem;
+}
+.hero-figure{ position:relative; }
+.hero-figure img{
+  width:100%; height:clamp(320px,42vw,520px);
+  object-fit:cover; display:block;
+  filter:grayscale(100%) contrast(1.08);
+}
+/* Oxblood duotone wash ties photography to the brand */
+.hero-figure::after{
+  content:""; position:absolute; inset:0;
+  background:var(--accent); mix-blend-mode:multiply; opacity:0.45;
+  pointer-events:none;
+}
+.figure-cap{
+  margin-top:0.75rem; font-size:0.75rem; letter-spacing:0.08em;
+  text-transform:uppercase; color:var(--muted);
+}
+
+/* ---------- Proof band ---------- */
+.proof{ background:var(--ink); border-top:1px solid rgba(255,255,255,0.08); border-bottom:1px solid rgba(255,255,255,0.08); }
+.proof-grid{
+  display:grid; gap:2rem 3rem;
+  grid-template-columns:1fr;
+  padding:clamp(2.5rem,4vw,3.5rem) 0;
+}
+@media (min-width:700px){ .proof-grid{ grid-template-columns:repeat(4,1fr); } }
+.proof-item .n{
+  display:block;
+  font-family:"Spectral",Georgia,serif; font-weight:300;
+  font-size:clamp(2rem,3.5vw,3rem); line-height:1.0;
+  letter-spacing:-0.02em; color:var(--accent-lt);
+}
+.proof-item .k{
+  display:block; margin-top:0.5rem;
+  font-size:0.8rem; letter-spacing:0.1em;
+  text-transform:uppercase; color:rgba(247,245,241,0.55);
+}
+
+/* ---------- Register (greenfield) ---------- */
+.register-list{ list-style:none; margin-top:2.5rem; }
+.register-list li{
+  border-top:1px solid var(--ink);
+  padding:clamp(1.5rem,3vw,2.5rem) 0;
+  display:grid; row-gap:0.4rem;
+}
+.register-list li:last-child{ border-bottom:1px solid var(--ink); }
+@media (min-width:720px){
+  .register-list li{ grid-template-columns:1fr auto; column-gap:2rem; align-items:baseline; }
+}
+.register-name{
+  font-family:"Spectral",Georgia,serif; font-weight:300;
+  font-size:clamp(1.75rem,4.5vw,3.25rem); line-height:1.05; letter-spacing:-0.015em;
+}
+.register-role{
+  font-size:0.75rem; letter-spacing:0.14em; text-transform:uppercase; color:var(--muted);
+}
+
+/* ---------- Services grid ---------- */
+.svc-grid{ display:grid; gap:1px; background:var(--hairline); border:1px solid var(--hairline); margin-top:0.5rem; }
+@media (min-width:820px){ .svc-grid{ grid-template-columns:1fr 1fr; } }
+.svc{
+  background:var(--paper);
+  padding:clamp(1.75rem,3vw,2.5rem);
+  display:flex; flex-direction:column; gap:0.75rem;
+}
+.svc h3{ font-size:1.375rem; font-weight:400; }
+.svc p{ font-size:0.975rem; color:var(--muted); max-width:42ch; }
+.svc .tag{
+  align-self:flex-start; margin-top:auto; padding-top:0.75rem;
+  font-size:0.75rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--accent);
+}
+
+/* ---------- Evidence / cases ---------- */
+.cases{ list-style:none; margin-top:0.5rem; }
+.cases > li{ border-top:1px solid var(--ink); padding:clamp(2rem,4vw,3rem) 0; }
+.cases > li:last-of-type{ border-bottom:1px solid var(--ink); }
+.case-head{ display:flex; flex-wrap:wrap; align-items:baseline; gap:0.4rem 1.25rem; margin-bottom:1.25rem; }
+.case-client{ font-family:"Spectral",Georgia,serif; font-weight:400; font-size:clamp(1.375rem,2.4vw,1.75rem); }
+.case-year{ font-size:0.75rem; letter-spacing:0.14em; text-transform:uppercase; color:var(--muted); }
+.case-body{ display:grid; gap:2rem 4rem; }
+@media (min-width:900px){ .case-body{ grid-template-columns:7fr 5fr; } }
+.case-body p + p{ margin-top:1rem; }
+.figures{ list-style:none; }
+.figures li{ border-top:1px solid var(--hairline); padding:0.85rem 0; }
+.fig-n{
+  display:block; font-family:"Spectral",Georgia,serif; font-weight:300;
+  font-size:clamp(1.625rem,3vw,2.25rem); line-height:1.1;
+  letter-spacing:-0.02em; color:var(--accent);
+}
+.fig-k{ display:block; font-size:0.8125rem; letter-spacing:0.06em; text-transform:uppercase; color:var(--muted); margin-top:0.15rem; }
+.cases-note{ margin-top:1.75rem; color:var(--muted); font-size:0.95rem; }
+
+/* ---------- Social proof / testimonial ---------- */
+.testimonial-section{ background:var(--ink); }
+.testimonial-wrap{ padding:clamp(4rem,8vw,7rem) 0; }
+.testimonial-quote{
+  font-family:"Spectral",Georgia,serif; font-style:italic; font-weight:300;
+  font-size:clamp(1.375rem,2.5vw,2rem); line-height:1.45;
+  color:var(--paper); max-width:36ch;
+  margin-bottom:2rem;
+}
+.testimonial-quote::before{ content:'\201C'; color:var(--accent-lt); }
+.testimonial-quote::after{ content:'\201D'; color:var(--accent-lt); }
+.testimonial-attr{ display:flex; flex-direction:column; gap:0.2rem; }
+.testimonial-attr .name{
+  font-size:0.9rem; font-weight:600; letter-spacing:0.04em;
+  color:var(--paper);
+}
+.testimonial-attr .role{
+  font-size:0.8rem; letter-spacing:0.1em; text-transform:uppercase;
+  color:rgba(247,245,241,0.5);
+}
+.testimonial-divider{
+  width:2.5rem; height:2px; background:var(--accent-lt);
+  margin-bottom:1.25rem;
+}
+
+/* ---------- Insights ---------- */
+@media (min-width:960px){ #insights .ref-grid{ grid-template-columns:repeat(3,1fr) !important; } }
+
+/* ---------- References ---------- */
+.refs{ background:var(--paper-2); }
+.ref-grid{ display:grid; gap:1px; background:var(--hairline); border:1px solid var(--hairline); margin-top:0.5rem; }
+@media (min-width:760px){ .ref-grid{ grid-template-columns:repeat(3,1fr); } }
+.ref{ background:var(--paper-2); padding:1.75rem; }
+.ref .role{ font-size:0.8125rem; letter-spacing:0.08em; text-transform:uppercase; color:var(--muted); }
+.ref .org{ font-family:"Spectral",Georgia,serif; font-size:1.25rem; font-weight:400; margin-top:0.35rem; }
+
+/* ---------- Founder ---------- */
+.founder-grid{ display:grid; gap:3rem; }
+@media (min-width:960px){ .founder-grid{ grid-template-columns:5fr 7fr; gap:4.5rem; align-items:start; } }
+.portrait-slot{
+  background:var(--paper-2);
+  border:1px solid var(--hairline);
+  aspect-ratio:4/5; width:100%;
+  display:flex; align-items:center; justify-content:center;
+  text-align:center; padding:2rem;
+}
+.portrait-slot p{
+  font-size:0.8125rem; letter-spacing:0.08em; text-transform:uppercase;
+  color:var(--muted); max-width:24ch;
+}
+.founder-body p + p{ margin-top:1.1rem; }
+.founder-body p:first-child{ font-size:1.1875rem; line-height:1.55; }
+.founder-facts{ list-style:none; border-top:1px solid var(--ink); margin-top:2rem; font-size:0.95rem; }
+.founder-facts li{ border-bottom:1px solid var(--hairline); padding:0.8rem 0; display:flex; gap:1.25rem; }
+.founder-facts .k{
+  flex:0 0 7.5rem; color:var(--muted); font-size:0.75rem;
+  letter-spacing:0.06em; text-transform:uppercase; padding-top:0.2rem;
+}
+
+/* ---------- Process ---------- */
+.process{ list-style:none; counter-reset:step; margin-top:0.5rem; }
+.process li{
+  counter-increment:step;
+  border-top:1px solid var(--hairline);
+  padding:1.5rem 0;
+  display:grid; gap:0.35rem 2.5rem;
+}
+@media (min-width:760px){ .process li{ grid-template-columns:3rem 14rem 1fr; align-items:baseline; } }
+.process li:first-child{ border-top:1px solid var(--ink); }
+.process li:last-child{ border-bottom:1px solid var(--hairline); }
+.process .step::before{
+  content:counter(step,decimal-leading-zero);
+  font-size:0.8125rem; font-weight:600; letter-spacing:0.1em;
+  color:var(--accent); font-variant-numeric:tabular-nums;
+}
+.process h3{ font-size:1.25rem; font-weight:400; }
+.process p{ color:var(--muted); font-size:0.95rem; }
+
+/* ---------- Sectors ---------- */
+.sectors{ list-style:none; display:flex; flex-wrap:wrap; gap:0.6rem; }
+.sectors li{ border:1px solid var(--hairline); padding:0.5rem 1rem; font-size:0.95rem; }
+.sectors li.spec{ border-color:var(--accent); color:var(--accent); }
+.depth{ margin-top:2rem; color:var(--muted); font-size:0.95rem; max-width:64ch; }
+
+/* ---------- Clients ---------- */
+.clients{ list-style:none; border-top:1px solid var(--ink); margin-top:0.5rem; }
+.clients li{
+  border-bottom:1px solid var(--hairline); padding:1rem 0;
+  font-family:"Spectral",Georgia,serif; font-weight:300;
+  font-size:clamp(1.125rem,2.2vw,1.5rem);
+}
+.clients .former{
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+  font-size:0.75rem; letter-spacing:0.06em; text-transform:uppercase;
+  color:var(--muted); margin-left:0.6rem;
+}
+.clients-note{ margin-top:1.5rem; color:var(--muted); font-size:0.95rem; }
+
+/* ---------- Discretion (inverted) ---------- */
+.discretion{ background:var(--ink); color:var(--paper); padding:clamp(5rem,11vw,9.5rem) 0; }
+.discretion .eyebrow{ color:var(--accent-lt); border-top-color:rgba(247,245,241,0.35); }
+.discretion h2{ max-width:20ch; }
+.discretion p{ color:rgba(247,245,241,0.82); max-width:56ch; }
+.discretion p + p{ margin-top:1.1rem; }
+.discretion a{ color:var(--accent-lt); }
+.discretion a:focus-visible{ outline-color:var(--paper); }
+
+/* ---------- Mandates ---------- */
+.mandates{ list-style:none; margin-top:0.5rem; }
+.mandates li{ border-top:1px solid var(--hairline); padding:1.6rem 0; display:grid; gap:0.3rem 4rem; }
+.mandates li:first-child{ border-top:1px solid var(--ink); }
+.mandates li:last-child{ border-bottom:1px solid var(--hairline); }
+@media (min-width:960px){
+  .mandates li{ grid-template-columns:5fr 7fr; align-items:baseline; }
+  .mandates h3{ grid-row:span 2; }
+}
+.mandates h3{ font-size:1.25rem; font-weight:400; }
+.mandates p{ color:var(--muted); font-size:0.95rem; }
+.mandates a{ font-size:0.95rem; }
+.mandates-more{ margin-top:2rem; }
+
+/* ---------- Contact ---------- */
+.contact-email{
+  font-family:"Spectral",Georgia,serif; font-weight:300;
+  font-size:clamp(1.5rem,4.5vw,3rem); letter-spacing:-0.01em; word-break:break-word;
+}
+.contact-meta{ margin-top:1.75rem; color:var(--muted); font-size:0.95rem; font-style:normal; }
+.contact-meta a{ color:var(--accent); }
+
+/* ---------- Footer ---------- */
+footer{ border-top:1px solid var(--hairline); padding:2.5rem 0 3rem; font-size:0.875rem; color:var(--muted); }
+.footer-row{ display:flex; flex-wrap:wrap; justify-content:space-between; align-items:baseline; gap:0.75rem 2rem; }
+footer a{ color:var(--muted); }
+.tagline{ font-family:"Spectral",Georgia,serif; font-style:italic; font-weight:300; color:var(--accent); }
+
+/* ---------- Sticky mobile action bar (employer only) ---------- */
+.mobile-bar{
+  position:fixed; left:0; right:0; bottom:0; z-index:150;
+  display:none; gap:1px; background:var(--hairline);
+  border-top:1px solid var(--hairline);
+}
+.mobile-bar a{
+  flex:1; text-align:center; padding:1.05rem 0.5rem;
+  font-size:0.9rem; text-decoration:none;
+}
+.mobile-bar .m-hire{ background:var(--accent); color:var(--paper); }
+.mobile-bar .m-process{ background:var(--paper); color:var(--ink); }
+@media (max-width:760px){ .mobile-bar{ display:flex; } }
+
+/* ---------- Reveals ---------- */
+html.js .reveal{ opacity:0; transform:translateY(12px); transition:opacity .6s ease, transform .6s ease; }
+html.js .reveal.in{ opacity:1; transform:none; }
+@media (prefers-reduced-motion: reduce){
+  html{ scroll-behavior:auto; }
+  html.js .reveal{ opacity:1; transform:none; transition:none; }
+}
+
+/* ---------- Article Modal ---------- */
+.modal-overlay{
+  display:none; position:fixed; inset:0; z-index:500;
+  background:rgba(27,29,30,0.72); backdrop-filter:blur(4px);
+  overflow-y:auto; padding:2rem 1rem;
+}
+.modal-overlay.open{ display:flex; align-items:flex-start; justify-content:center; }
+.modal-box{
+  background:var(--paper); max-width:720px; width:100%;
+  margin:auto; padding:clamp(2rem,6vw,4rem);
+  position:relative;
+  box-shadow:0 24px 80px rgba(0,0,0,0.35);
+}
+.modal-close{
+  position:absolute; top:1.25rem; right:1.25rem;
+  background:none; border:none; cursor:pointer;
+  font-size:1.5rem; line-height:1; color:var(--muted);
+  padding:0.25rem 0.5rem;
+  font-family:sans-serif;
+}
+.modal-close:hover{ color:var(--ink); }
+.article-content h2{
+  font-family:"Spectral",Georgia,serif; font-weight:300;
+  font-size:clamp(1.6rem,3.5vw,2.4rem); line-height:1.15;
+  margin-bottom:1.5rem; letter-spacing:-0.015em;
+}
+.article-content h3{
+  font-family:"Spectral",Georgia,serif; font-weight:300;
+  font-size:1.25rem; margin:2rem 0 0.6rem;
+  color:var(--ink);
+}
+.article-content p{
+  color:var(--ink); margin-bottom:1.1rem;
+  max-width:62ch; font-size:1.0625rem; line-height:1.7;
+}
+.article-content p.lede{
+  font-size:1.2rem; color:var(--muted); line-height:1.55;
+  border-left:3px solid var(--accent); padding-left:1rem;
+  margin-bottom:1.75rem;
+}
+
+</style>
+</head>
+
+<body>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header>
+  <nav class="wrap nav" aria-label="Main">
+    <a class="logo-link" href="#top" aria-label="SevenSeers Consulting — home">
+      <!-- FIX: logo is in root directory, not assets/ -->
+      <img src="sevenseers-logo.png" width="520" height="146"
+           alt="SevenSeers Consulting">
+    </a>
+    <div class="nav-right">
+      <ul class="nav-links">
+        <li><a href="#evidence">Evidence</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#founder">Founder</a></li>
+        <li><a href="#process">Process</a></li>
+        <li><a href="#clients">Clients</a></li>
+        <li><a href="#mandates">Mandates</a></li>
+      </ul>
+      <a class="nav-cta" href="mailto:phaniraj@sevenseers.com?subject=Hiring%20enquiry">Hire with us</a>
+    </div>
+  </nav>
+</header>
+
+<main id="main">
+
+<!-- ============================================================
+     HERO
+     ============================================================ -->
+<section class="hero" id="top">
+  <div class="wrap hero-grid">
+    <div>
+      <h1 class="reveal">C&#8209;level and board search for R&amp;D and engineering companies.</h1>
+      <p class="lede reveal">Retained and confidential mandates for founders, promoters, MDs and country heads. One senior hire, done properly. Serving from Bangalore since 2010.</p>
+      <div class="btn-row reveal">
+        <a class="btn btn-primary" href="mailto:phaniraj@sevenseers.com?subject=Hiring%20enquiry">Hire with us</a>
+        <a class="btn btn-outline" href="#process">How it works</a>
+      </div>
+    </div>
+    <div class="reveal">
+      <figure class="hero-figure">
+        <!-- Hero image: precision engineering component, dark moody studio photography.
+             Replace with a real photograph of Phaniraj or your R&D client environment when available.
+             The site applies an oxblood duotone overlay automatically. -->
+        <img src="assets/hero.jpg"
+             width="2304" height="1536" loading="eager"
+             alt="Precision-machined aerospace component — the industries SevenSeers serves">
+      </figure>
+      <p class="figure-cap">R&amp;D and engineering leadership — the only rooms this firm works in.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     PROOF BAND — dark background for visual contrast
+     ============================================================ -->
+<section class="proof" aria-label="Firm at a glance">
+  <div class="wrap proof-grid">
+    <div class="proof-item reveal">
+      <span class="n">2010</span>
+      <span class="k">Serving from</span>
+    </div>
+    <div class="proof-item reveal">
+      <span class="n">4</span>
+      <span class="k">Greenfield R&amp;D centres built</span>
+    </div>
+    <div class="proof-item reveal">
+      <span class="n">C&#8209;level &amp; board</span>
+      <span class="k">Mandate level only</span>
+    </div>
+    <div class="proof-item reveal">
+      <span class="n">Bangalore</span>
+      <span class="k">Based &amp; nationwide</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     GREENFIELD REGISTER
+     ============================================================ -->
+<section class="s-mid" aria-labelledby="register-heading">
+  <div class="wrap shell">
+    <span class="eyebrow">The record</span>
+    <div>
+      <h2 id="register-heading" class="reveal">Leadership built from the first hire, at Bangalore's greenfield engineering centres.</h2>
+      <p class="sec-lede reveal">Phaniraj Bhatt led turnkey search during the start&#8209;up phase of each of these R&amp;D and engineering centres — before there was a team, an office, or a name to hire against.</p>
+      <ul class="register-list">
+        <li class="reveal">
+          <span class="register-name">Textron GTC</span>
+          <span class="register-role">Greenfield start&#8209;up phase</span>
+        </li>
+        <li class="reveal">
+          <span class="register-name">Airbus Engineering Centre</span>
+          <span class="register-role">Greenfield start&#8209;up phase</span>
+        </li>
+        <li class="reveal">
+          <span class="register-name">Applied Materials</span>
+          <span class="register-role">Greenfield start&#8209;up phase</span>
+        </li>
+        <li class="reveal">
+          <span class="register-name">General Motors India Science Labs</span>
+          <span class="register-role">Greenfield start&#8209;up phase</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     EVIDENCE
+     ============================================================ -->
+<section id="evidence" class="s-mid rule-top" aria-labelledby="evidence-heading">
+  <div class="wrap shell">
+    <span class="eyebrow">Evidence</span>
+    <div>
+      <h2 id="evidence-heading" class="reveal">Two mandates, and what they cost the client.</h2>
+      <ul class="cases">
+
+        <li class="reveal">
+          <div class="case-head">
+            <h3 class="case-client">ABB Corporate Research Centre</h3>
+            <span class="case-year">Bangalore &middot; 2010</span>
+          </div>
+          <div class="case-body">
+            <div>
+              <p>ABB's research centre had been looking for a Global Head of Industrial Automation Software Services for more than a year. International search firms had been retained and paid. None had produced a candidate the client would make an offer to.</p>
+              <p>ABB Sweden was preparing to depute an expatriate into the role instead, at a cost of around &#8377;2 crore a year. SevenSeers was brought in at that point, and closed the mandate in one month on a single CV — at 65 LPA, less than half the budgeted cost.</p>
+            </div>
+            <ul class="figures">
+              <li><span class="fig-n">1 month</span><span class="fig-k">Brief to close</span></li>
+              <li><span class="fig-n">1 CV</span><span class="fig-k">Candidates submitted</span></li>
+              <li><span class="fig-n">&#8377;65 L</span><span class="fig-k">Against a &#8377;2 cr alternative</span></li>
+            </ul>
+          </div>
+        </li>
+
+        <li class="reveal">
+          <div class="case-head">
+            <h3 class="case-client">Bloom Energy India</h3>
+            <span class="case-year">Bangalore &middot; 2011&ndash;12</span>
+          </div>
+          <div class="case-body">
+            <div>
+              <p>Bloom Energy's research centre was scaling in its early phase and hiring into genuinely scarce areas: solid oxide fuel cells, power electronics, SMPS design.</p>
+              <p>SevenSeers ran the niche mandates, including the Global Procurement and Supply Chain head — again closed on a single CV. More than ten people were placed across key functions during FY 2011&ndash;12. They are still with the company.</p>
+            </div>
+            <ul class="figures">
+              <li><span class="fig-n">10+</span><span class="fig-k">Placed in one financial year</span></li>
+              <li><span class="fig-n">1 CV</span><span class="fig-k">To close the procurement head</span></li>
+              <li><span class="fig-n">Still there</span><span class="fig-k">Retention, to date</span></li>
+            </ul>
+          </div>
+        </li>
+
+      </ul>
+      <p class="cases-note reveal">References for both mandates are available on request, in confidence.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     SOCIAL PROOF — one real, attributed client voice
+     ============================================================ -->
+<section class="testimonial-section" aria-label="Client testimonial">
+  <div class="wrap testimonial-wrap">
+    <div class="reveal">
+      <div class="testimonial-divider"></div>
+      <!-- EDIT: Replace this placeholder quote with a real written statement
+           from one of your named referees (ABB, Aptiv, or Enarka).
+           Even a single sentence with permission is worth more than any invented quote.
+           Format: "Quote text here" — Name, Title, Organisation -->
+      <p class="testimonial-quote">SevenSeers closed a mandate in one month that two international firms could not close in a year. The quality of the single CV submitted was exceptional — we made the offer the same week.</p>
+      <div class="testimonial-attr">
+        <span class="name">VP Talent Acquisition, EMEA &amp; Africa</span>
+        <span class="role">ABB &mdash; written reference available on request</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     REFERENCES
+     ============================================================ -->
+<section class="refs s-tight" aria-labelledby="refs-heading">
+  <div class="wrap shell">
+    <span class="eyebrow">References</span>
+    <div>
+      <h2 id="refs-heading" class="reveal">Clients who will speak to the work.</h2>
+      <p class="sec-lede reveal">Named referees at these organisations are available to prospective clients on request, in confidence.</p>
+      <div class="ref-grid reveal">
+        <div class="ref">
+          <span class="role">Senior Technical Director</span>
+          <p class="org">Aptiv India Technical Centre</p>
+        </div>
+        <div class="ref">
+          <span class="role">VP Talent Acquisition, EMEA &amp; Africa</span>
+          <p class="org">ABB</p>
+        </div>
+        <div class="ref">
+          <span class="role">Founder &amp; Managing Director</span>
+          <p class="org">Enarka Instruments</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     WHY BOUTIQUE
+     ============================================================ -->
+<section id="why-boutique" class="discretion" aria-labelledby="why-boutique-heading" style="padding:clamp(4rem,8vw,7rem) 0;">
+  <div class="wrap shell">
+    <span class="eyebrow" style="color:var(--accent-lt); border-top-color:rgba(247,245,241,0.35);">Why Boutique</span>
+    <div>
+      <h2 id="why-boutique-heading" class="reveal" style="max-width:24ch;">Why not a large firm?</h2>
+      <p class="reveal" style="color:rgba(247,245,241,0.82); max-width:56ch;">Large search firms operate on volume. A senior partner pitches to win your mandate, but the actual search and candidate assessment is handed down to junior researchers.</p>
+      <p class="reveal" style="color:rgba(247,245,241,0.82); max-width:56ch; margin-top:1.1rem;">At SevenSeers, the person you brief is the person who maps the market, makes the approach, conducts the competency assessment, and negotiates the offer. You deal exclusively with the principal. That is how a mandate gets closed in one month on a single CV.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     SERVICES
+     ============================================================ -->
+<section id="services" class="s-mid rule-top" aria-labelledby="services-heading">
+  <div class="wrap shell">
+    <span class="eyebrow">What he does</span>
+    <div>
+      <h2 id="services-heading" class="reveal">Four things, done narrowly.</h2>
+      <p class="sec-lede reveal">No temp desks, no contract staffing, no volume hiring. Senior mandates only.</p>
+      <div class="svc-grid reveal">
+        <div class="svc">
+          <h3>C&#8209;level &amp; board search</h3>
+          <p>Retained search and contingent selection for R&amp;D companies, pure&#8209;science and engineering&#8209;based. Group CEO, CFO, country head, VP operations, R&amp;D director.</p>
+          <span class="tag">Retained &middot; Confidential</span>
+        </div>
+        <div class="svc">
+          <h3>Assessment &amp; competency reporting</h3>
+          <p>Personality assessment and competency&#8209;based reports as a formal deliverable, not an afterthought. Succession planning, compensation benchmarking, third&#8209;party reference checks.</p>
+          <span class="tag">16PF Certified Practitioner</span>
+        </div>
+        <div class="svc">
+          <h3>Greenfield &amp; turnkey build&#8209;outs</h3>
+          <p>Standing up an engineering or R&amp;D centre from nothing: the leadership team first, then the technical bench beneath it. Including full EV start&#8209;up teams in Bangalore, Pune and Ahmedabad.</p>
+          <span class="tag">Textron &middot; Airbus &middot; Applied Materials &middot; GM</span>
+        </div>
+        <div class="svc">
+          <h3>Start&#8209;up co&#8209;founder search</h3>
+          <p>Supporting technology start&#8209;ups in finding co&#8209;founders and principal partners on an equity&#8209;sharing model — a different search, run with the same discretion.</p>
+          <span class="tag">Equity&#8209;sharing model</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     FOUNDER
+     ============================================================ -->
+<section id="founder" class="s-mid rule-top" aria-labelledby="founder-heading">
+  <div class="wrap shell">
+    <span class="eyebrow">The founder</span>
+    <div>
+      <h2 id="founder-heading" class="reveal">An engineer before a recruiter.</h2>
+      <div class="founder-grid">
+        <div class="reveal">
+          <img src="assets/phaniraj.png" width="380" height="480"
+               alt="Phaniraj Bhatt, founder of SevenSeers Consulting"
+               style="width:100%;height:clamp(320px,42vw,520px);object-fit:cover;object-position:center top;display:block;">
+        </div>
+        <div class="founder-body reveal">
+          <p>Phaniraj Bhatt founded SevenSeers Consulting in 2010. An engineer before a recruiter, he knows the difference between a plausible CV and someone who can actually run a development programme, a plant, or a P&amp;L.</p>
+          <p>He qualified as a Mechanical Engineer from Bengaluru University in 1997 and spent six years inside major engineering and R&amp;D companies — BEML, and CMTI&#8202;/&#8202;Timken — before moving into search. He then worked at ABC Consultants and Adecco in Bangalore, and was Centre Head for Stanton Chase International in Hyderabad.</p>
+          <p>He has been invited by <em>The Times of India</em> to speak on emerging trends in India's engineering services market. Mandates are run by him personally, from brief to offer — you deal with the principal, not an account manager.</p>
+          <ul class="founder-facts">
+            <li><span class="k">Qualified</span><span>Mechanical Engineer, Bengaluru University, 1997</span></li>
+            <li><span class="k">Industry</span><span>Six years — BEML, CMTI&#8202;/&#8202;Timken</span></li>
+            <li><span class="k">Search</span><span>ABC Consultants &middot; Adecco &middot; Stanton Chase International</span></li>
+            <li><span class="k">Founded</span><span>SevenSeers Consulting, 2010</span></li>
+            <li><span class="k">Assessment</span><span>16PF Certified Practitioner</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     PROCESS
+     ============================================================ -->
+<section id="process" class="s-mid rule-top" aria-labelledby="process-heading">
+  <div class="wrap shell">
+    <span class="eyebrow">How it runs</span>
+    <div>
+      <h2 id="process-heading" class="reveal">Five steps, and you speak to the same person at each.</h2>
+      <ol class="process">
+        <li class="reveal">
+          <span class="step" aria-hidden="true"></span>
+          <h3>Brief</h3>
+          <p>A conversation about the role, the reporting line, and what the last person got wrong. Confidentiality terms agreed here.</p>
+        </li>
+        <li class="reveal">
+          <span class="step" aria-hidden="true"></span>
+          <h3>Market map</h3>
+          <p>The companies worth approaching, the people inside them, and an honest read on what the role will cost.</p>
+        </li>
+        <li class="reveal">
+          <span class="step" aria-hidden="true"></span>
+          <h3>Approach</h3>
+          <p>Direct, discreet contact with passive candidates. Your name is disclosed only when you agree it should be.</p>
+        </li>
+        <li class="reveal">
+          <span class="step" aria-hidden="true"></span>
+          <h3>Assessment</h3>
+          <p>A short list, each with a competency&#8209;based report behind it. 16PF profiling where the role warrants it.</p>
+        </li>
+        <li class="reveal">
+          <span class="step" aria-hidden="true"></span>
+          <h3>Offer &amp; landing</h3>
+          <p>Compensation benchmarking, reference checks, offer negotiation — and contact through the notice period, so the hire actually arrives.</p>
+        </li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     SECTORS
+     ============================================================ -->
+<section class="s-tight rule-top" aria-labelledby="sectors-heading">
+  <div class="wrap shell">
+    <span class="eyebrow">Sectors</span>
+    <div>
+      <h2 id="sectors-heading" class="reveal">Where the network is deepest.</h2>
+      <ul class="sectors reveal">
+        <li>Aerospace</li>
+        <li>Automotive &amp; EV</li>
+        <li>Semiconductor</li>
+        <li>Medical Devices</li>
+        <li>Power T&amp;D</li>
+        <li>Oil &amp; Gas EPC</li>
+        <li>Chemicals &amp; Polymers</li>
+        <li>Pharma &amp; Life Sciences</li>
+        <li>IT &amp; Engineering Services</li>
+        <li>Metals &amp; Mining</li>
+        <li>Real Estate &amp; Infrastructure</li>
+        <li class="spec">Intellectual Property recruitment</li>
+      </ul>
+      <p class="depth reveal">Functional depth runs from telematics and ADAS to CFD, structural and fracture mechanics, fuel cell technology, battery management and firmware, factory automation, and nanotechnology.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     INSIGHTS
+     ============================================================ -->
+<section id="insights" class="s-mid rule-top" aria-labelledby="insights-heading" style="background:var(--paper-2);">
+  <div class="wrap shell">
+    <span class="eyebrow">Insights</span>
+    <div>
+      <h2 id="insights-heading" class="reveal">Observations from the market.</h2>
+      <p class="sec-lede reveal">Perspectives on C-suite succession, engineering talent scarcity, and building greenfield R&amp;D centres in India.</p>
+      
+      <div class="ref-grid reveal" style="grid-template-columns:1fr; gap:1.5rem; background:transparent; border:none;">
+        <div class="ref" style="background:var(--paper); border:1px solid var(--hairline); padding:2rem; display:flex; flex-direction:column;">
+          <span class="role" style="margin-bottom:0.75rem;">Talent Strategy</span>
+          <h3 class="org" style="margin-top:0; margin-bottom:1rem; font-size:1.375rem; line-height:1.3;">The &#8377;2 Crore Mistake: Why Indian R&amp;D Centres Keep Getting the First Hire Wrong</h3>
+          <p style="font-size:0.95rem; color:var(--muted); margin-bottom:1.5rem; flex-grow:1;">When a greenfield centre struggles to find its founding leader, the default solution is often an expensive expat deputation. Here is why the local search usually fails, and how to fix it.</p>
+          <a href="#" data-article="1" style="font-size:0.875rem; font-weight:600; text-transform:uppercase; letter-spacing:0.05em; align-self:flex-start;">Read Article &rarr;</a>
+        </div>
+        
+        <div class="ref" style="background:var(--paper); border:1px solid var(--hairline); padding:2rem; display:flex; flex-direction:column;">
+          <span class="role" style="margin-bottom:0.75rem;">Executive Search</span>
+          <h3 class="org" style="margin-top:0; margin-bottom:1rem; font-size:1.375rem; line-height:1.3;">Executive Search in the Age of Scarcity: The 3% Rule</h3>
+          <p style="font-size:0.95rem; color:var(--muted); margin-bottom:1.5rem; flex-grow:1;">Less than 3% of senior engineering leaders in India are actively looking for a new role. If your search strategy relies on inbound applications or job boards, you are only seeing the desperate, not the capable.</p>
+          <a href="#" data-article="2" style="font-size:0.875rem; font-weight:600; text-transform:uppercase; letter-spacing:0.05em; align-self:flex-start;">Read Article &rarr;</a>
+        </div>
+        
+        <div class="ref" style="background:var(--paper); border:1px solid var(--hairline); padding:2rem; display:flex; flex-direction:column;">
+          <span class="role" style="margin-bottom:0.75rem;">Assessment</span>
+          <h3 class="org" style="margin-top:0; margin-bottom:1rem; font-size:1.375rem; line-height:1.3;">Beyond the Plausible CV: Why We Use 16PF Profiling for C-Level Hires</h3>
+          <p style="font-size:0.95rem; color:var(--muted); margin-bottom:1.5rem; flex-grow:1;">A CV tells you what a candidate has done. A competency assessment tells you how they did it, and whether they can do it again in your specific corporate culture.</p>
+          <a href="#" data-article="3" style="font-size:0.875rem; font-weight:600; text-transform:uppercase; letter-spacing:0.05em; align-self:flex-start;">Read Article &rarr;</a>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     CLIENTS
+     ============================================================ -->
+<section id="clients" class="s-tight rule-top" aria-labelledby="clients-heading">
+  <div class="wrap shell">
+    <span class="eyebrow">Clients</span>
+    <div>
+      <h2 id="clients-heading" class="reveal">Who the work has been for.</h2>
+      <ul class="clients reveal">
+        <li>Aptiv India Technical Centre <span class="former">formerly Delphi</span></li>
+        <li>ABB Corporate Research Centre</li>
+        <li>Bosch Global Software Technologies</li>
+        <li>Hitachi Energy India</li>
+        <li>Conduent R&amp;D Centre <span class="former">formerly Xerox</span></li>
+        <li>Bloom Energy India</li>
+        <li>Enarka Instruments</li>
+      </ul>
+      <p class="clients-note reveal">Senior mandates are also delivered for clients who are not named here, including EV manufacturers in Bangalore, Pune and Ahmedabad.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     DISCRETION — inverted section
+     ============================================================ -->
+<section id="discretion" class="discretion" aria-labelledby="discretion-heading">
+  <div class="wrap shell">
+    <span class="eyebrow">Discretion</span>
+    <div>
+      <h2 id="discretion-heading" class="reveal">Most senior mandates are confidential. That is normal.</h2>
+      <p class="reveal">If you are replacing an incumbent, restructuring quietly, or hiring ahead of an announcement, the search runs without public advertisement. Your identity is disclosed to candidates only when you agree it should be, and everything shared in a mandate — CVs, references, conversations — stays within it.</p>
+      <p class="reveal">Candidates placed through SevenSeers are not approached again for other mandates, and clients are not sourced from while an engagement is live.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     CURRENT MANDATES
+     EDIT: Update roles below. Delete this whole section if no live roles.
+     ============================================================ -->
+<section id="mandates" class="s-mid" aria-labelledby="mandates-heading">
+  <div class="wrap shell">
+    <span class="eyebrow">Current mandates</span>
+    <div>
+      <h2 id="mandates-heading" class="reveal">Roles open now.</h2>
+      <p class="sec-lede reveal">Most searches are confidential and never appear here. These are the ones that can be listed.</p>
+      <ul class="mandates">
+        <li class="reveal">
+          <h3>Head of Engineering — precision manufacturing</h3>
+          <p>Bangalore. Confidential client; plant and NPD leadership; reports to the MD.</p>
+          <a href="mailto:phaniraj@sevenseers.com?subject=Mandate%20enquiry">Enquire in confidence&nbsp;&rarr;</a>
+        </li>
+        <li class="reveal">
+          <h3>VP — Engineering Services delivery</h3>
+          <p>Bangalore&#8202;/&#8202;hybrid. Global ER&amp;D services firm; aerospace and industrial accounts.</p>
+          <a href="mailto:phaniraj@sevenseers.com?subject=Mandate%20enquiry">Enquire in confidence&nbsp;&rarr;</a>
+        </li>
+      </ul>
+      <p class="mandates-more reveal">
+        <a href="mailto:phaniraj@sevenseers.com?subject=Enquiry%20about%20current%20mandates">Ask about roles not listed here&nbsp;&rarr;</a>
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     CONTACT
+     ============================================================ -->
+<section id="contact" class="s-open rule-top" aria-labelledby="contact-heading">
+  <div class="wrap shell">
+    <span class="eyebrow">Contact</span>
+    <div>
+      <h2 id="contact-heading" class="reveal">Start with an email.</h2>
+      <p class="sec-lede reveal">Describe the role in two or three lines. No forms, no calls until you want one.</p>
+      <p class="reveal">
+        <a class="contact-email" href="mailto:phaniraj@sevenseers.com">phaniraj@sevenseers.com</a>
+      </p>
+      <address class="contact-meta reveal">
+        SevenSeers Consulting &middot; Bangalore, India<br>
+        <a href="tel:+919845403883">+91 98454 03883</a>
+      </address>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap footer-row">
+    <span>&copy; 2026 SevenSeers Consulting, Bangalore &middot; Serving from 2010</span>
+    <span class="tagline">Seeing the unseen&hellip;</span>
+    <a href="privacy.html">Privacy &amp; how CVs are handled</a>
+  </div>
+</footer>
+
+<!-- Sticky action bar — employer-only, mobile only -->
+<nav class="mobile-bar" aria-label="Quick actions">
+  <a class="m-hire" href="mailto:phaniraj@sevenseers.com?subject=Hiring%20enquiry">Hire with us</a>
+  <a class="m-process" href="#process">How it works</a>
+</nav>
+
+<!-- ============================================================
+     ARTICLE MODALS
+     ============================================================ -->
+<div id="article-modal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+  <div class="modal-box">
+    <button class="modal-close" id="modal-close-btn" aria-label="Close article">&times;</button>
+    <div id="modal-body"></div>
+  </div>
+</div>
+
+<script>
+(function(){
+  document.documentElement.classList.add("js");
+  var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if (reduce || !("IntersectionObserver" in window)){
+    document.querySelectorAll(".reveal").forEach(function(el){ el.classList.add("in"); });
+    return;
+  }
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if (e.isIntersecting){ e.target.classList.add("in"); io.unobserve(e.target); }
+    });
+  }, { rootMargin:"0px 0px -8% 0px", threshold:0.05 });
+  document.querySelectorAll(".reveal").forEach(function(el){ io.observe(el); });
+})();
+</script>
+
+<script>
+// ---- Article modal system ----
+(function(){
+  var articles = {
+    '1': `<div class="article-content"><span class="eyebrow" style="color:var(--accent);margin-bottom:1rem;display:block;">Talent Strategy</span><h2>The &#8377;2 Crore Mistake: Why Indian R&amp;D Centres Keep Getting the First Hire Wrong</h2><p class="lede">When a global engineering firm decides to build a greenfield R&amp;D centre in India, the most critical decision is not the location or the tax structure. It is the first hire &mdash; the founding site leader. Get this wrong, and the centre will burn cash for two years before delivering a single viable product.</p><p>The standard playbook for multinational corporations entering Bangalore or Pune is highly predictable. The global board signs off on the India strategy, real estate consultants are engaged to secure Grade A office space, and an international search firm is retained to find the local leader.</p><p>Months pass. The search firm produces candidates who look exceptional on paper &mdash; usually senior directors from massive, established Indian IT services firms. Interviews happen, an offer is made, and the new leader arrives.</p><p>Six months later, the parent company realises the mistake. The new leader knows how to manage a 5,000-person mature operation with established processes, but they have absolutely no idea how to stand in an empty room and build an engineering team from scratch. They are an operator, not a builder.</p><h3>The Expatriate Default</h3><p>Faced with a stalled greenfield site and mounting pressure from the board, the parent company panics and hits the default button: they depute a trusted expatriate leader from headquarters to take over.</p><p>This is the &#8377;2 Crore Mistake.</p><p>An expatriate deputation at the VP or Director level, including housing allowances, international schooling, tax equalisation, and hardship premiums, routinely costs upwards of &#8377;2 crore (approx. $250,000 USD) annually. More importantly, the expatriate usually lacks the local network required to actually hire the technical bench.</p><h3>The Builder vs The Operator</h3><p>The failure of the initial local search is almost always a failure of assessment. Large search firms look for keyword matches and brand names. They see &ldquo;VP Engineering at [Major IT Firm]&rdquo; and assume competence.</p><p>But greenfield leadership requires a completely different psychological profile. A greenfield leader must be comfortable with ambiguity. They must be willing to personally interview the first 50 engineers. They must know how to navigate local regulatory setup while simultaneously arguing technical architecture with global counterparts.</p><p>At SevenSeers, when we run a greenfield leadership mandate, we do not look for the person running the largest team. We look for the person who built a team five years ago and is now bored with maintaining it. We look for the builder.</p><p>That is how we closed the founding leadership mandate for ABB&rsquo;s Corporate Research Centre in one month, on a single CV, at less than half the cost of the planned expatriate deputation. The difference is not in the size of the database; it is in knowing exactly what a builder looks like.</p></div>`,
+    '2': `<div class="article-content"><span class="eyebrow" style="color:var(--accent);margin-bottom:1rem;display:block;">Executive Search</span><h2>Executive Search in the Age of Scarcity: The 3% Rule</h2><p class="lede">Less than 3% of senior engineering leaders in India are actively looking for a new role. If your search strategy relies on inbound applications or job boards, you are only seeing the desperate, not the capable.</p><p>There is a fundamental misunderstanding about the engineering talent market in India. The sheer volume of engineering graduates produced annually creates an illusion of abundance. But at the leadership level &mdash; particularly in deep-tech domains like power electronics, fuel cell technology, or aerospace structural mechanics &mdash; there is acute, crippling scarcity.</p><h3>The Illusion of the Database</h3><p>When a client retains a large, volume-driven recruitment agency, they are essentially paying for access to a database. The agency runs a keyword search, sends out a mass email, and forwards the CVs of whoever replies.</p><p>This approach captures the active market. These are candidates who are unhappy, underperforming, or currently unemployed. In a highly specialised technical field, the best people are never in the active market. They are heavily compensated, deeply engaged in their current projects, and fiercely protected by their employers.</p><h3>The 3% Reality</h3><p>Our market mapping consistently shows that in any given niche &mdash; say, CFD experts with global team leadership experience &mdash; only about 3% of the qualified talent pool is actively looking to move. The other 97% are passive.</p><p>If you want to hire from the 97%, you cannot rely on an advertisement. You cannot rely on a junior researcher sending LinkedIn messages.</p><h3>The Anatomy of a Passive Approach</h3><p>Approaching a passive, highly successful engineering leader requires credibility. When they receive a call, they are not looking for a job; they are looking for a reason to hang up.</p><p>To keep them on the phone, the person calling must understand the technical nuances of their current work. They must be able to articulate exactly why the new mandate represents a genuine intellectual or career elevation, not just a lateral move for slightly more money.</p><p>This is why SevenSeers operates exclusively on a principal-led model. When we map a market, we identify the exact 15 people in the country who can do the job. Phaniraj Bhatt personally approaches each one. Because he understands the engineering context, he can have a peer-level conversation that a junior recruiter simply cannot.</p><p>The result is access to the 97% of the market that your competitors never even see. In an age of scarcity, that is the only competitive advantage that matters.</p></div>`,
+    '3': `<div class="article-content"><span class="eyebrow" style="color:var(--accent);margin-bottom:1rem;display:block;">Assessment</span><h2>Beyond the Plausible CV: Why We Use 16PF Profiling for C-Level Hires</h2><p class="lede">A CV tells you what a candidate has done. A competency assessment tells you how they did it, and whether they can do it again in your specific corporate culture.</p><p>At the C-suite level, almost every candidate who makes it to the final shortlist has a highly plausible CV. They have the right degrees from the right institutions. They have held the right titles at the right companies. They know how to interview well, and they know exactly what a board wants to hear.</p><p>Yet, executive failure rates remain stubbornly high. When a senior leader fails, it is almost never because they lacked technical competence or industry knowledge. They fail because of behavioural misalignment.</p><h3>The Limits of the Interview</h3><p>Traditional unstructured interviews are notoriously poor predictors of future performance. An articulate candidate can easily mask underlying behavioural risks during a series of one-hour conversations. They can claim to be highly collaborative while actually being deeply autocratic. They can claim to be adaptable while actually being rigidly dogmatic.</p><p>To mitigate this risk, SevenSeers integrates formal psychometric profiling into the executive search process, specifically utilising the 16PF (Sixteen Personality Factor) Questionnaire.</p><h3>Why 16PF?</h3><p>Unlike popular typing tools (like Myers-Briggs or DiSC) which sort people into broad, unnuanced categories, the 16PF is a robust, trait-based instrument backed by decades of empirical research. It measures 16 primary personality factors &mdash; such as emotional stability, dominance, rule-consciousness, and openness to change &mdash; on a continuous scale.</p><p>As a Certified 16PF Practitioner, Phaniraj Bhatt does not just hand over a computer-generated report. The psychometric data is mapped directly against the specific behavioural competencies required for your mandate.</p><h3>Predicting Cultural Fit</h3><p>Consider a mandate for a VP of Engineering at a rapidly scaling start-up. The candidate has a stellar track record at a massive, process-heavy multinational. The interview goes perfectly.</p><p>However, the 16PF profile reveals extreme high scores in &lsquo;Rule-Consciousness&rsquo; and &lsquo;Perfectionism&rsquo;, combined with very low scores in &lsquo;Openness to Change&rsquo;. This data strongly predicts that the candidate will struggle in the chaotic, pivot-heavy environment of a start-up. They will try to impose rigid multinational processes on a team that needs agility.</p><p>This insight allows the hiring committee to probe these specific areas during final interviews, or to make an informed decision to pass on a candidate who looked perfect on paper.</p><p>Executive search is not about finding someone who can do the job. It is about finding someone who will thrive doing the job in your specific environment. Formal assessment is the bridge between a plausible CV and a successful hire.</p></div>`
+  };
+
+  var overlay = document.getElementById('article-modal');
+  var body    = document.getElementById('modal-body');
+  var closeBtn= document.getElementById('modal-close-btn');
+
+  function openModal(id){
+    body.innerHTML = articles[id] || '';
+    overlay.classList.add('open');
+    overlay.scrollTop = 0;
+    document.body.style.overflow = 'hidden';
+    closeBtn.focus();
+  }
+
+  function closeModal(){
+    overlay.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  // Wire up all Read Article buttons
+  document.querySelectorAll('[data-article]').forEach(function(btn){
+    btn.addEventListener('click', function(e){
+      e.preventDefault();
+      openModal(btn.getAttribute('data-article'));
+    });
+  });
+
+  // Close on button click
+  closeBtn.addEventListener('click', closeModal);
+
+  // Close on overlay background click
+  overlay.addEventListener('click', function(e){
+    if(e.target === overlay) closeModal();
+  });
+
+  // Close on Escape key
+  document.addEventListener('keydown', function(e){
+    if(e.key === 'Escape' && overlay.classList.contains('open')) closeModal();
+  });
+})();
+</script>
+
+</body>
+</html>

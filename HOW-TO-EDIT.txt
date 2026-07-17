@@ -1,0 +1,71 @@
+SEVENSEERS CONSULTING — HOW TO EDIT THIS SITE
+=============================================
+
+Files:
+  index.html    — the whole website
+  privacy.html  — the privacy page
+  assets/       — logo + hero image. KEEP THIS FOLDER next to the
+                  two HTML files or the logo will not appear.
+
+No database, no login, no build step. Open a file in any plain-text
+editor (Notepad, TextEdit in plain-text mode), change the words,
+save, re-upload. Search for "EDIT:" to find every editable spot.
+
+
+>>> BEFORE THE SITE GOES LIVE — 3 THINGS <<<
+--------------------------------------------
+1. ADD A PHOTOGRAPH OF PHANIRAJ.
+   This is the biggest gap. Two places:
+   - Hero: replace assets/hero-placeholder.png with a real photo,
+     keep the same filename. Landscape, 1200x900 or bigger.
+   - Founder section: search index.html for "portrait-slot" and
+     follow the comment there to swap in a headshot.
+
+2. FIX THE MANDATES. The two roles listed are FAKE PLACEHOLDERS
+   pointing at example.com. Replace with real roles or delete the
+   whole section (see instructions in the file).
+
+3. CHECK THE CASE STUDY NUMBERS. The ABB and Bloom Energy figures
+   (1 month, 1 CV, Rs 65 L vs Rs 2 cr, 10+ placed) are the most
+   persuasive content on the site. Confirm every number is right,
+   and that both clients are comfortable being named.
+
+
+1. CURRENT MANDATES (list of live roles)
+----------------------------------------
+Search index.html for: CURRENT MANDATES
+Each role runs from <li> to </li>. Change three things:
+   <h3>Role title</h3>
+   <p>One line about the role.</p>
+   <a href="JOB-PORTAL-LINK-HERE">View the full posting</a>
+ - ADD:    copy a whole <li>...</li> block and edit it.
+ - REMOVE: delete its whole <li>...</li> block.
+ - None:   delete the whole <section>, as the comment explains.
+
+
+2. EMAIL, PHONE, ADDRESS
+------------------------
+phaniraj@sevenseers.com appears in index.html (header, hero,
+mandates, candidates, contact, mobile bar) and privacy.html.
+Use find-and-replace across both files if it changes.
+Phone and location are in the Contact section, marked EDIT.
+
+
+3. TESTIMONIALS — READ THIS
+---------------------------
+The "References" section deliberately contains NO quotes. Nothing
+on this site is invented. If a client gives WRITTEN permission for
+a real quote, replace the contents of one of the three boxes with
+their words and name. Never add a quote nobody said.
+
+
+4. EVERYTHING ELSE
+------------------
+All wording is ordinary text in index.html. Change any sentence —
+just keep the tags around it (<p> and </p>) intact.
+
+
+5. DO NOT TOUCH
+---------------
+The block between <style> and </style> controls colour, type and
+spacing. The site's red is sampled from the logo itself.
