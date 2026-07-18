@@ -427,47 +427,6 @@ html.js .reveal.in{ opacity:1; transform:none; }
   html.js .reveal{ opacity:1; transform:none; transition:none; }
 }
 
-/* ---------- Article Modal ---------- */
-.modal-overlay{
-  display:none; position:fixed; inset:0; z-index:500;
-  background:rgba(27,29,30,0.72); backdrop-filter:blur(4px);
-  overflow-y:auto; padding:2rem 1rem;
-}
-.modal-overlay.open{ display:flex; align-items:flex-start; justify-content:center; }
-.modal-box{
-  background:var(--paper); max-width:720px; width:100%;
-  margin:auto; padding:clamp(2rem,6vw,4rem);
-  position:relative;
-  box-shadow:0 24px 80px rgba(0,0,0,0.35);
-}
-.modal-close{
-  position:absolute; top:1.25rem; right:1.25rem;
-  background:none; border:none; cursor:pointer;
-  font-size:1.5rem; line-height:1; color:var(--muted);
-  padding:0.25rem 0.5rem;
-  font-family:sans-serif;
-}
-.modal-close:hover{ color:var(--ink); }
-.article-content h2{
-  font-family:"Spectral",Georgia,serif; font-weight:300;
-  font-size:clamp(1.6rem,3.5vw,2.4rem); line-height:1.15;
-  margin-bottom:1.5rem; letter-spacing:-0.015em;
-}
-.article-content h3{
-  font-family:"Spectral",Georgia,serif; font-weight:300;
-  font-size:1.25rem; margin:2rem 0 0.6rem;
-  color:var(--ink);
-}
-.article-content p{
-  color:var(--ink); margin-bottom:1.1rem;
-  max-width:62ch; font-size:1.0625rem; line-height:1.7;
-}
-.article-content p.lede{
-  font-size:1.2rem; color:var(--muted); line-height:1.55;
-  border-left:3px solid var(--accent); padding-left:1rem;
-  margin-bottom:1.75rem;
-}
-
 </style>
 </head>
 
@@ -517,7 +476,7 @@ html.js .reveal.in{ opacity:1; transform:none; }
              Replace with a real photograph of Phaniraj or your R&D client environment when available.
              The site applies an oxblood duotone overlay automatically. -->
         <img src="assets/hero.jpg"
-             width="2304" height="1536" loading="eager"
+             width="1600" height="1067" loading="eager" fetchpriority="high"
              alt="Precision-machined aerospace component — the industries SevenSeers serves">
       </figure>
       <p class="figure-cap">R&amp;D and engineering leadership — the only rooms this firm works in.</p>
@@ -840,21 +799,21 @@ html.js .reveal.in{ opacity:1; transform:none; }
           <span class="role" style="margin-bottom:0.75rem;">Talent Strategy</span>
           <h3 class="org" style="margin-top:0; margin-bottom:1rem; font-size:1.375rem; line-height:1.3;">The &#8377;2 Crore Mistake: Why Indian R&amp;D Centres Keep Getting the First Hire Wrong</h3>
           <p style="font-size:0.95rem; color:var(--muted); margin-bottom:1.5rem; flex-grow:1;">When a greenfield centre struggles to find its founding leader, the default solution is often an expensive expat deputation. Here is why the local search usually fails, and how to fix it.</p>
-          <a href="#" data-article="1" style="font-size:0.875rem; font-weight:600; text-transform:uppercase; letter-spacing:0.05em; align-self:flex-start;">Read Article &rarr;</a>
+          <a href="article1.html" style="font-size:0.875rem; font-weight:600; text-transform:uppercase; letter-spacing:0.05em; align-self:flex-start;">Read Article &rarr;</a>
         </div>
         
         <div class="ref" style="background:var(--paper); border:1px solid var(--hairline); padding:2rem; display:flex; flex-direction:column;">
           <span class="role" style="margin-bottom:0.75rem;">Executive Search</span>
           <h3 class="org" style="margin-top:0; margin-bottom:1rem; font-size:1.375rem; line-height:1.3;">Executive Search in the Age of Scarcity: The 3% Rule</h3>
           <p style="font-size:0.95rem; color:var(--muted); margin-bottom:1.5rem; flex-grow:1;">Less than 3% of senior engineering leaders in India are actively looking for a new role. If your search strategy relies on inbound applications or job boards, you are only seeing the desperate, not the capable.</p>
-          <a href="#" data-article="2" style="font-size:0.875rem; font-weight:600; text-transform:uppercase; letter-spacing:0.05em; align-self:flex-start;">Read Article &rarr;</a>
+          <a href="article2.html" style="font-size:0.875rem; font-weight:600; text-transform:uppercase; letter-spacing:0.05em; align-self:flex-start;">Read Article &rarr;</a>
         </div>
         
         <div class="ref" style="background:var(--paper); border:1px solid var(--hairline); padding:2rem; display:flex; flex-direction:column;">
           <span class="role" style="margin-bottom:0.75rem;">Assessment</span>
           <h3 class="org" style="margin-top:0; margin-bottom:1rem; font-size:1.375rem; line-height:1.3;">Beyond the Plausible CV: Why We Use 16PF Profiling for C-Level Hires</h3>
           <p style="font-size:0.95rem; color:var(--muted); margin-bottom:1.5rem; flex-grow:1;">A CV tells you what a candidate has done. A competency assessment tells you how they did it, and whether they can do it again in your specific corporate culture.</p>
-          <a href="#" data-article="3" style="font-size:0.875rem; font-weight:600; text-transform:uppercase; letter-spacing:0.05em; align-self:flex-start;">Read Article &rarr;</a>
+          <a href="article3.html" style="font-size:0.875rem; font-weight:600; text-transform:uppercase; letter-spacing:0.05em; align-self:flex-start;">Read Article &rarr;</a>
         </div>
       </div>
       
@@ -963,16 +922,6 @@ html.js .reveal.in{ opacity:1; transform:none; }
   <a class="m-process" href="#process">How it works</a>
 </nav>
 
-<!-- ============================================================
-     ARTICLE MODALS
-     ============================================================ -->
-<div id="article-modal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-title">
-  <div class="modal-box">
-    <button class="modal-close" id="modal-close-btn" aria-label="Close article">&times;</button>
-    <div id="modal-body"></div>
-  </div>
-</div>
-
 <script>
 (function(){
   document.documentElement.classList.add("js");
@@ -990,54 +939,6 @@ html.js .reveal.in{ opacity:1; transform:none; }
 })();
 </script>
 
-<script>
-// ---- Article modal system ----
-(function(){
-  var articles = {
-    '1': `<div class="article-content"><span class="eyebrow" style="color:var(--accent);margin-bottom:1rem;display:block;">Talent Strategy</span><h2>The &#8377;2 Crore Mistake: Why Indian R&amp;D Centres Keep Getting the First Hire Wrong</h2><p class="lede">When a global engineering firm decides to build a greenfield R&amp;D centre in India, the most critical decision is not the location or the tax structure. It is the first hire &mdash; the founding site leader. Get this wrong, and the centre will burn cash for two years before delivering a single viable product.</p><p>The standard playbook for multinational corporations entering Bangalore or Pune is highly predictable. The global board signs off on the India strategy, real estate consultants are engaged to secure Grade A office space, and an international search firm is retained to find the local leader.</p><p>Months pass. The search firm produces candidates who look exceptional on paper &mdash; usually senior directors from massive, established Indian IT services firms. Interviews happen, an offer is made, and the new leader arrives.</p><p>Six months later, the parent company realises the mistake. The new leader knows how to manage a 5,000-person mature operation with established processes, but they have absolutely no idea how to stand in an empty room and build an engineering team from scratch. They are an operator, not a builder.</p><h3>The Expatriate Default</h3><p>Faced with a stalled greenfield site and mounting pressure from the board, the parent company panics and hits the default button: they depute a trusted expatriate leader from headquarters to take over.</p><p>This is the &#8377;2 Crore Mistake.</p><p>An expatriate deputation at the VP or Director level, including housing allowances, international schooling, tax equalisation, and hardship premiums, routinely costs upwards of &#8377;2 crore (approx. $250,000 USD) annually. More importantly, the expatriate usually lacks the local network required to actually hire the technical bench.</p><h3>The Builder vs The Operator</h3><p>The failure of the initial local search is almost always a failure of assessment. Large search firms look for keyword matches and brand names. They see &ldquo;VP Engineering at [Major IT Firm]&rdquo; and assume competence.</p><p>But greenfield leadership requires a completely different psychological profile. A greenfield leader must be comfortable with ambiguity. They must be willing to personally interview the first 50 engineers. They must know how to navigate local regulatory setup while simultaneously arguing technical architecture with global counterparts.</p><p>At SevenSeers, when we run a greenfield leadership mandate, we do not look for the person running the largest team. We look for the person who built a team five years ago and is now bored with maintaining it. We look for the builder.</p><p>That is how we closed the founding leadership mandate for ABB&rsquo;s Corporate Research Centre in one month, on a single CV, at less than half the cost of the planned expatriate deputation. The difference is not in the size of the database; it is in knowing exactly what a builder looks like.</p></div>`,
-    '2': `<div class="article-content"><span class="eyebrow" style="color:var(--accent);margin-bottom:1rem;display:block;">Executive Search</span><h2>Executive Search in the Age of Scarcity: The 3% Rule</h2><p class="lede">Less than 3% of senior engineering leaders in India are actively looking for a new role. If your search strategy relies on inbound applications or job boards, you are only seeing the desperate, not the capable.</p><p>There is a fundamental misunderstanding about the engineering talent market in India. The sheer volume of engineering graduates produced annually creates an illusion of abundance. But at the leadership level &mdash; particularly in deep-tech domains like power electronics, fuel cell technology, or aerospace structural mechanics &mdash; there is acute, crippling scarcity.</p><h3>The Illusion of the Database</h3><p>When a client retains a large, volume-driven recruitment agency, they are essentially paying for access to a database. The agency runs a keyword search, sends out a mass email, and forwards the CVs of whoever replies.</p><p>This approach captures the active market. These are candidates who are unhappy, underperforming, or currently unemployed. In a highly specialised technical field, the best people are never in the active market. They are heavily compensated, deeply engaged in their current projects, and fiercely protected by their employers.</p><h3>The 3% Reality</h3><p>Our market mapping consistently shows that in any given niche &mdash; say, CFD experts with global team leadership experience &mdash; only about 3% of the qualified talent pool is actively looking to move. The other 97% are passive.</p><p>If you want to hire from the 97%, you cannot rely on an advertisement. You cannot rely on a junior researcher sending LinkedIn messages.</p><h3>The Anatomy of a Passive Approach</h3><p>Approaching a passive, highly successful engineering leader requires credibility. When they receive a call, they are not looking for a job; they are looking for a reason to hang up.</p><p>To keep them on the phone, the person calling must understand the technical nuances of their current work. They must be able to articulate exactly why the new mandate represents a genuine intellectual or career elevation, not just a lateral move for slightly more money.</p><p>This is why SevenSeers operates exclusively on a principal-led model. When we map a market, we identify the exact 15 people in the country who can do the job. Phaniraj Bhatt personally approaches each one. Because he understands the engineering context, he can have a peer-level conversation that a junior recruiter simply cannot.</p><p>The result is access to the 97% of the market that your competitors never even see. In an age of scarcity, that is the only competitive advantage that matters.</p></div>`,
-    '3': `<div class="article-content"><span class="eyebrow" style="color:var(--accent);margin-bottom:1rem;display:block;">Assessment</span><h2>Beyond the Plausible CV: Why We Use 16PF Profiling for C-Level Hires</h2><p class="lede">A CV tells you what a candidate has done. A competency assessment tells you how they did it, and whether they can do it again in your specific corporate culture.</p><p>At the C-suite level, almost every candidate who makes it to the final shortlist has a highly plausible CV. They have the right degrees from the right institutions. They have held the right titles at the right companies. They know how to interview well, and they know exactly what a board wants to hear.</p><p>Yet, executive failure rates remain stubbornly high. When a senior leader fails, it is almost never because they lacked technical competence or industry knowledge. They fail because of behavioural misalignment.</p><h3>The Limits of the Interview</h3><p>Traditional unstructured interviews are notoriously poor predictors of future performance. An articulate candidate can easily mask underlying behavioural risks during a series of one-hour conversations. They can claim to be highly collaborative while actually being deeply autocratic. They can claim to be adaptable while actually being rigidly dogmatic.</p><p>To mitigate this risk, SevenSeers integrates formal psychometric profiling into the executive search process, specifically utilising the 16PF (Sixteen Personality Factor) Questionnaire.</p><h3>Why 16PF?</h3><p>Unlike popular typing tools (like Myers-Briggs or DiSC) which sort people into broad, unnuanced categories, the 16PF is a robust, trait-based instrument backed by decades of empirical research. It measures 16 primary personality factors &mdash; such as emotional stability, dominance, rule-consciousness, and openness to change &mdash; on a continuous scale.</p><p>As a Certified 16PF Practitioner, Phaniraj Bhatt does not just hand over a computer-generated report. The psychometric data is mapped directly against the specific behavioural competencies required for your mandate.</p><h3>Predicting Cultural Fit</h3><p>Consider a mandate for a VP of Engineering at a rapidly scaling start-up. The candidate has a stellar track record at a massive, process-heavy multinational. The interview goes perfectly.</p><p>However, the 16PF profile reveals extreme high scores in &lsquo;Rule-Consciousness&rsquo; and &lsquo;Perfectionism&rsquo;, combined with very low scores in &lsquo;Openness to Change&rsquo;. This data strongly predicts that the candidate will struggle in the chaotic, pivot-heavy environment of a start-up. They will try to impose rigid multinational processes on a team that needs agility.</p><p>This insight allows the hiring committee to probe these specific areas during final interviews, or to make an informed decision to pass on a candidate who looked perfect on paper.</p><p>Executive search is not about finding someone who can do the job. It is about finding someone who will thrive doing the job in your specific environment. Formal assessment is the bridge between a plausible CV and a successful hire.</p></div>`
-  };
-
-  var overlay = document.getElementById('article-modal');
-  var body    = document.getElementById('modal-body');
-  var closeBtn= document.getElementById('modal-close-btn');
-
-  function openModal(id){
-    body.innerHTML = articles[id] || '';
-    overlay.classList.add('open');
-    overlay.scrollTop = 0;
-    document.body.style.overflow = 'hidden';
-    closeBtn.focus();
-  }
-
-  function closeModal(){
-    overlay.classList.remove('open');
-    document.body.style.overflow = '';
-  }
-
-  // Wire up all Read Article buttons
-  document.querySelectorAll('[data-article]').forEach(function(btn){
-    btn.addEventListener('click', function(e){
-      e.preventDefault();
-      openModal(btn.getAttribute('data-article'));
-    });
-  });
-
-  // Close on button click
-  closeBtn.addEventListener('click', closeModal);
-
-  // Close on overlay background click
-  overlay.addEventListener('click', function(e){
-    if(e.target === overlay) closeModal();
-  });
-
-  // Close on Escape key
-  document.addEventListener('keydown', function(e){
-    if(e.key === 'Escape' && overlay.classList.contains('open')) closeModal();
-  });
-})();
-</script>
 
 </body>
 </html>
