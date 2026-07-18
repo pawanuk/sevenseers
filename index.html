@@ -176,8 +176,12 @@ header{
 .nav-cta:hover{ background:var(--ink); }
 @media (max-width:760px){ .nav-cta{ display:none; } }
 
-/* ---------- Hero (type only) ---------- */
-.hero{ padding:clamp(5rem,11vw,9.5rem) 0 clamp(3.5rem,7vw,6rem); }
+/* ---------- Hero (two-column: text left, duotone portrait right) ---------- */
+.hero{ padding:clamp(4.5rem,10vw,8.5rem) 0 clamp(3rem,6vw,5rem); }
+.hero-grid{ display:grid; gap:3rem; align-items:stretch; }
+@media (min-width:1000px){
+  .hero-grid{ grid-template-columns:1.15fr 0.85fr; gap:4.5rem; }
+}
 .hero .kicker{
   font-size:0.8rem; font-weight:600; letter-spacing:0.16em;
   text-transform:uppercase; color:var(--accent); margin-bottom:2rem;
@@ -203,7 +207,27 @@ header{
   letter-spacing:-0.015em; margin-bottom:0.6rem;
 }
 .hero-fact .k{ color:var(--muted); font-size:1rem; max-width:52ch; display:block; }
-/* no image in the hero by design */
+
+/* Oxblood duotone portrait: the image's luminance is blended over the
+   accent ground, then a multiply gradient deepens the shadows. This
+   treatment is also what makes the current low-res source read as
+   deliberate rather than degraded. */
+.hero-figure{
+  position:relative; margin:0; background:var(--accent); overflow:hidden;
+  min-height:clamp(360px,60vw,520px);
+}
+@media (min-width:1000px){ .hero-figure{ min-height:0; height:100%; } }
+.hero-figure img{
+  position:absolute; inset:0; width:100%; height:100%;
+  object-fit:cover; object-position:center top;
+  filter:grayscale(1) contrast(1.12) brightness(0.72);
+  mix-blend-mode:luminosity; display:block;
+}
+.hero-figure::after{
+  content:""; position:absolute; inset:0;
+  background:linear-gradient(165deg, rgba(103,40,51,0.35) 0%, rgba(27,29,30,0.68) 95%);
+  mix-blend-mode:multiply; pointer-events:none;
+}
 
 /* ---------- Proof band ---------- */
 .proof{ background:var(--ink); color:var(--paper); padding:clamp(2.5rem,5vw,3.5rem) 0; }
@@ -495,25 +519,35 @@ html.js .ledger.in li:nth-child(5){ transition-delay:1.4s; }
 <main id="main">
 
 <!-- ============================================================
-     HERO — type only, by design. No image.
-     OPTION (later): a commissioned environmental portrait of
-     Phaniraj can replace the right-hand whitespace. If added,
-     switch .hero to a 2-column grid and keep the duotone dark.
-     Do not reinstate stock photography here.
+     HERO — two columns: text left, founder portrait right.
+     The portrait carries the site's oxblood duotone treatment
+     (CSS-only: luminosity blend over the accent ground).
+     No stock imagery here, ever.
      ============================================================ -->
 <section class="hero" id="top">
-  <div class="wrap">
-    <p class="kicker">Executive search &middot; Bangalore &middot; Since 2010</p>
-    <h1>C&#8209;level and board search for R&amp;D and engineering companies.</h1>
-    <p class="lede">Retained, confidential mandates for founders, promoters, MDs and country heads. I run every search myself, from brief to offer. One senior hire, done properly.</p>
-    <div class="btn-row">
-      <a class="btn btn-primary" href="mailto:phaniraj@sevenseers.com?subject=Hiring%20enquiry">Hire with us</a>
-      <a class="btn btn-outline" href="#process">How it works</a>
+  <div class="wrap hero-grid">
+    <div>
+      <p class="kicker">Executive search &middot; Bangalore &middot; Since 2010</p>
+      <h1>C&#8209;level and board search for R&amp;D and engineering companies.</h1>
+      <p class="lede">Retained, confidential mandates for founders, promoters, MDs and country heads. I run every search myself, from brief to offer. One senior hire, done properly.</p>
+      <div class="btn-row">
+        <a class="btn btn-primary" href="mailto:phaniraj@sevenseers.com?subject=Hiring%20enquiry">Hire with us</a>
+        <a class="btn btn-outline" href="#process">How it works</a>
+      </div>
+      <div class="hero-fact">
+        <span class="n">One month. One CV.</span>
+        <span class="k">How the ABB mandate closed, after two international firms had spent a year on it. <a href="#evidence">Read the case file&nbsp;&rarr;</a></span>
+      </div>
     </div>
-    <div class="hero-fact">
-      <span class="n">One month. One CV.</span>
-      <span class="k">How the ABB mandate closed, after two international firms had spent a year on it. <a href="#evidence">Read the case file&nbsp;&rarr;</a></span>
-    </div>
+    <figure class="hero-figure">
+      <!-- [PLACEHOLDER — using existing low-res photo; replace with
+           high-resolution portrait of Phaniraj when available.
+           Swap only the src; the duotone treatment is CSS and will
+           apply to the new image unchanged.] -->
+      <img src="assets/phaniraj.png" width="378" height="378"
+           fetchpriority="high"
+           alt="Phaniraj Bhatt, founder of SevenSeers Consulting">
+    </figure>
   </div>
 </section>
 
